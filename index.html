@@ -89,6 +89,12 @@ body::before {
   
   
 }
+.bodyMain {
+    background-image: url("image.jpg");
+    background-color: #fefefe;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .lw {
     font-size: 30px;
 }
@@ -96,6 +102,11 @@ body::before {
 .lw {
     text-align: center;
     border: 2px solid;
+}
+ul {
+    list-style-type: none;
+    margin: 1;
+    padding: 0;
 }
 .image {
   display: block;
@@ -170,12 +181,18 @@ body::before {
     <title>j</title>
 </head>
 
-<body>
+<body class="bodyMain">
     <!-- Start your code here -->
     <div id="wrapper">
         <div id="main">
             <div class="inner">
-                <section id="home_section" class="active" style="">
+                <section id="navBar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="milk.html">Cow</a></li>
+                    </ul>
+                </section>
+                <section id="home_section" class="active">
                     <div class="marquee">
                         <p> wha!! wha!!!! wha1!1!! </p>
                     </div>
