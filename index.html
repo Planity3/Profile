@@ -10,7 +10,6 @@
 
 body::after {
     content: '';
-    display: block;
     height: 100%;
     left: 0;
     opacity: 0;
@@ -27,7 +26,6 @@ body::after {
 
 body::before {
     content: '';
-    display: block;
     height: var(--background-height);
     left: 0;
     pointer-events: none;
@@ -36,7 +34,7 @@ body::before {
     transform: scale(1);
     width: 100vw;
     z-index: 0;
-    background-image: linear-gradient(0deg, rgba(82, 42, 199, 0, 988)0%, rgba(35, 61, 196, 0, 678) 0%), url('image.jpg');
+    background-image: url('image.jpg');
     background-size: cover, 100rem;
     background-position: 0% 0%, center;
     background-position-x: 0%, center ;
@@ -51,7 +49,6 @@ body::before {
     flex-direction: column;
     justify-content: center;
     min-height:  var(--viewport-height);
-    overflow: hidden;
     position: relative;
     z-index: 2;
 
@@ -68,13 +65,11 @@ body::before {
   --border-radius-bl: 0;
   align-items: center;
   display: flex;
-  flex-grow: 0;
+  flex-grow: 10;
   flex-shrink: 0;
   justify-content: center;
-  max-width: 100%;
   position: relative;
   text-align: var(--alignment);
-  padding: var(--padding-vertical) var(--padding-horizontal);
 }
 #main inner {
   --padding-horizontal:  4rem;
@@ -90,9 +85,12 @@ body::before {
   
 }
 .bodyMain {
-    background-image: url("image.jpg");
+    /* background-image: linear-gradient(.25turn, rgba(238, 130, 238, 0.5), rgba(106, 90, 205, 0.5)); */
+    background-image:
+    linear-gradient(.25turn, rgba(238, 130, 238, 0.7), rgba(106, 90, 205, 0.7)),
+    url('image.jpg');
     background-color: #fefefe;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 .lw {
@@ -183,8 +181,7 @@ ul {
 
 <body class="bodyMain">
     <!-- Start your code here -->
-    <div id="wrapper">
-        <div id="main">
+        <div id="main" class="wrapper">
             <div class="inner">
                 <section id="navBar">
                     <ul>
@@ -200,7 +197,6 @@ ul {
 
                 </section>
             </div>
-        </div>
     </div>
 
     <!-- End your code here -->
